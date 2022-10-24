@@ -8,7 +8,10 @@ It can be used to easily access fuzzed transactions from within other programs.
 ```
 cd cmd/livefuzzer
 go build
-./livefuzzer spam
+./livefuzzer <command> <rpc-url> <pvkey> <mnemonic> <start..end> [<hex-formatted-seed>] [<bool-access-list>]
+
+For Example:
+./livefuzzer spam https://127.0.0.1:8545 <PRIVATE_KEY_OF_THE_ACCOUNT> "MNEMONIC_PHRASE_TO_GENERATE_ACCOUNTS_FOR_TX_SPAMMING" 0..10
 ```
 
 Tx-fuzz allows for an optional seed parameter to get reproducible fuzz transactions
